@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Поймай Квадрат!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="menu">
+    <h1>🎯 Поймай Квадрат!</h1>
+    <button id="start-button">Играть</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <div class="top-bar">
+      <p>Очки: <span id="score">0</span></p>
+      <p>⏱️ Осталось: <span id="timer">30</span> сек</p>
+    </div>
+    <div id="game-area"></div>
+  </div>
+
+  <div id="game-over" class="hidden">
+    <h2>Игра окончена!</h2>
+    <p>Твой счёт: <span id="final-score">0</span></p>
+    <button onclick="location.reload()">Играть снова</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
