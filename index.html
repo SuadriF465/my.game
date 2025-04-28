@@ -2,29 +2,34 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Поймай Квадрат!</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="menu">
+
+  <div class="container" id="menu">
     <h1>🎯 Поймай Квадрат!</h1>
-    <button id="start-button">Играть</button>
-  </div>
-
-  <div id="game" class="hidden">
-    <div class="top-bar">
-      <p>Очки: <span id="score">0</span></p>
-      <p>⏱️ Осталось: <span id="timer">30</span> сек</p>
+    <button id="start-btn">Начать Игру</button>
+    <button id="instructions-btn">Как Играть?</button>
+    <div id="stats">
+      🏆 Ваш рекорд: <span id="record">0</span>
     </div>
-    <div id="game-area"></div>
   </div>
 
-  <div id="game-over" class="hidden">
-    <h2>Игра окончена!</h2>
-    <p>Твой счёт: <span id="final-score">0</span></p>
-    <button onclick="location.reload()">Играть снова</button>
+  <div class="container hidden" id="instructions">
+    <h2>📖 Правила игры</h2>
+    <p>У вас есть 30 секунд, чтобы поймать как можно больше квадратов! Каждый клик даёт 1 очко.</p>
+    <p>Установите новый рекорд и станьте чемпионом!</p>
+    <button id="back-btn">Назад</button>
+  </div>
+
+  <div class="container hidden" id="game">
+    <h2>⏱️ Осталось времени: <span id="time">30</span> сек.</h2>
+    <h3>🏆 Очки: <span id="score">0</span></h3>
+    <div id="square"></div>
   </div>
 
   <script src="script.js"></script>
